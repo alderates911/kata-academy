@@ -1,0 +1,335 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+.main {
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    padding: 10px 20px;
+    background-color: #EFF6FF;
+}
+
+.main__bg-image_logo {
+    display: flex;
+    width: 155px;
+    height: 30px;
+    margin: 46px 54px;
+}
+
+.main__bg-image {
+    background-image: url(img/bg.jpg);
+    background-repeat: no-repeat;
+    width: 759px;
+    height: 1000px;
+}
+
+.logo {
+    background-image: url(img/logo.svg);
+    background-repeat: no-repeat;
+    background-size: 90%;
+    padding: 0;
+    width: 150px;
+    height: 30px;
+}
+
+.main__register {
+    background-color: #FFFFFF;
+    font: 16px Barlow reg;
+    color: #2A4A5C;
+    height: 1000px;
+}
+
+.main__register-section {
+    display: flex;
+    flex-direction: column;
+    margin: 90px 60px;
+    gap: 52px;
+}
+
+.main__register_header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.main__register_header_h1 {
+    font: 1.8rem Barlow, sans-serif;
+}
+
+.main__register_header_h4 {
+    font: 1.1rem Barlow reg, sans-serif;
+    color: #7B8A92;
+}
+
+@font-face {
+    font-family: Barlow;
+    src: url('./fonts/barlow/Barlow-Medium.otf');
+}
+
+@font-face {
+    font-family: Barlow reg;
+    src: url('./fonts/barlow/Barlow-Regular.otf');
+}
+
+.main__register-links {
+    display: flex;
+    gap: 50px;
+    font: 13px Barlow reg;
+}
+
+.reg-link {
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+    width: 230px;
+    height: 41px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.main__register_link-fb {
+    background-color: #255A9B;
+    position: relative;
+}
+
+.main__register_link-in {
+    background-color: #0076B6;
+    position: relative;
+}
+
+.main__register_link-fb::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url('./img/facebook.svg');
+    background-size: 100%;
+    left: 10px;
+    
+}
+
+.main__register_link-in::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url('./img/linkedin.svg');
+    background-size: 100%;
+    left: 15px;
+    
+}
+
+.main__register_spliter {
+    display: flex;
+    justify-content: center;
+}
+
+.splitter {
+    display: flex;
+    position: relative;
+    font: 12px Barlow reg;
+
+    color: #7B8A92;
+}
+
+.splitter::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 1px;
+    top: 50%;
+    left: -690%;
+    background-color:  #7B8A92;
+}
+
+.splitter::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 1px;
+    top: 50%;
+    right: -690%;
+    background-color:  #7B8A92;
+}
+
+.main__register_form-input {
+    display: flex;
+    gap: 50px;
+}
+
+
+
+.form-input {
+    width: 220px;
+    height: 39px;
+    padding-top: 11px;
+    padding-left: 9px;
+    border: 1px solid #e1e8ec;
+    border-radius: 2px;
+}
+
+
+.form-input:focus {
+    outline: none;
+    border-left: 2px solid #3698FB;
+    margin-left: -1px;
+}
+
+.custom-placeholder {
+    position: relative;
+}
+
+.custom-placeholder::before {
+    position: absolute;
+    content: "Email";
+    left: -223px;
+ } 
+ 
+ .custom-placeholder::after {
+    position: absolute;
+    content: "Phone";
+    left: 60px;
+ }
+
+ .main__register_form {
+    display: flex;
+    flex-direction: column;
+    gap: 52px;
+ }
+
+ .main__register_form-question {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+ .main__register_form_q {
+    font: 1.3em Barlow, sans-serif;
+ }
+
+ .main__register_form-p {
+    font: 0.87rem Barlow reg, sans-serif;
+    color: #7B8A92;
+ }
+
+ .main__register_form-radio {
+    display: flex;
+    gap: 50px;
+ }
+
+ .main__registor_radio-button,
+ .main__register_form-notification_button {
+    display: none;
+ }
+
+ .main__registor_radio-fake {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #AFAFAF;
+    border-radius: 50%;
+    position: relative;
+ }
+
+ .main__registor_radio-fake::before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 0 0 5px #3698FB;
+    opacity: 0;
+    transition: .2s;
+ }
+
+.main__registor_radio-button:checked + .main__registor_radio-fake::before {
+    opacity: 1;
+}
+
+ .main__register_radio-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+ }
+
+ .main__registor_radio-text {
+    font-family: Barlow reg;
+    font-weight: bold;
+ }
+
+ .main__register_form-notification {
+    display: flex;
+    align-content: center;
+    margin-top: 80px;
+    gap:10px;
+ }
+
+ .main__registor_checkbox-fake {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #AFAFAF;
+    position: relative;
+ }
+
+ .main__registor_checkbox-fake::before {
+    position: absolute;
+    content: '';
+    background-image: url('./img/checked.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #3698FB;
+    width: 10px;
+    height: 10px;
+    opacity: 0;
+ }
+
+ .main__register_form-notification_button:checked + .main__registor_checkbox-fake::before {
+    opacity: 1;
+ }
+
+ .main__register_form_notification-text {
+    font: 0.87rem Barlow reg, sans-serif;
+    color: #7B8A92;
+ }
+
+ .main__register_form_notification-link {
+    color: #3698FB;
+ }
+
+ .main__register_form_submit-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Barlow reg;
+    font-weight: 400;
+    width: 230px;
+    height: 41px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #3698FB;
+    cursor: pointer;
+ }
+
+ 
+ 
+
+ 
+
+
+
+
