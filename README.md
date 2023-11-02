@@ -1,2 +1,2 @@
 # kata-academy
-kata-akademy-task.netlify.app
+https://kata-akademy-task.netlify.app/
